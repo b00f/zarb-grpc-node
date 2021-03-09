@@ -16,7 +16,7 @@ var packageDefinition = protoLoader.loadSync(
 var zarb = grpc.loadPackageDefinition(packageDefinition).zarb;
 
 function main() {
-    var client = new zarb.Zarb("localhost:9090",
+    var client = new zarb.Zarb("139.162.135.180:9090",
         grpc.credentials.createInsecure());
 
     client.getBlock({ height: 100, verbosity: 1 }, function (err, response) {
